@@ -88,4 +88,4 @@ Lessons:::
     2. Edit Users
 38. Deploy no Vercel
 
-I have completed "0:01:40" v
+I have completed "0:03:40" v "0:05:35"

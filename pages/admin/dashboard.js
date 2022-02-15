@@ -1,5 +1,5 @@
-import { Chart as ChartJS } from 'chart.js/auto';
-import { Chart } from 'react-chartjs-2';
+import Chart from 'chart.js/auto';
+import { Bar } from 'react-chartjs-2';
 import {
   Button,
   Card,
@@ -12,7 +12,6 @@ import {
   ListItemText,
   Typography,
 } from '@material-ui/core';
-import { Bar } from 'react-chartjs-2';
 import axios from 'axios';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
@@ -22,6 +21,8 @@ import Layout from '../../components/Layout';
 import { getError } from '../../utils/error';
 import { Store } from '../../utils/Store';
 import useStyles from '../../utils/styles';
+
+Chart.register();
 
 function reducer(state, action) {
   switch (action.type) {
