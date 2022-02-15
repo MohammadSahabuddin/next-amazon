@@ -1,5 +1,14 @@
 import Chart from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
+import axios from 'axios';
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
+import NextLink from 'next/link';
+import React, { useContext, useEffect, useReducer } from 'react';
+import Layout from '../../components/Layout';
+import { getError } from '../../utils/error';
+import { Store } from '../../utils/Store';
+import useStyles from '../../utils/styles';
 import {
   Button,
   Card,
@@ -12,15 +21,6 @@ import {
   ListItemText,
   Typography,
 } from '@material-ui/core';
-import axios from 'axios';
-import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
-import NextLink from 'next/link';
-import React, { useContext, useEffect, useReducer } from 'react';
-import Layout from '../../components/Layout';
-import { getError } from '../../utils/error';
-import { Store } from '../../utils/Store';
-import useStyles from '../../utils/styles';
 
 Chart.register();
 
